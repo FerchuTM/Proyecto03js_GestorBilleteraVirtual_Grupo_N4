@@ -1,0 +1,38 @@
+.agregado {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+}
+
+.listado {
+    background-color: brown;
+    border: 6px brown solid;
+    flex-direction: column;
+}
+
+.opcionesList {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.consumos {
+    background-color: rgb(85, 255, 85);
+    border: 6px rgb(85, 255, 85) solid;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: darkcyan;
+    margin: 0;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
