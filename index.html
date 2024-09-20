@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestor de Billeteras</title>
     <link rel="stylesheet" href="css/index.css">
+    <script src="scr/script.js"></script>
 </head>
 <body>
     <head>
@@ -12,37 +13,32 @@
     </head>
     <main>
         <div class="agregado">
-            <input type="text" placeholder="Nombre y Apellido">
-            <select name="billetera" id="">
-                <option value="">Elije tu billetera</option>
-                <option value="">Mercado Pago</option>
-                <option value="">Ualá</option>
-                <option value="">Personal Pay</option>
-                <option value="">Naranja X</option>
-            </select>
-            <input type="number" placeholder="Pago">
-            <input type="button" value="Agregar">
+            <input type="text" id="nombre" placeholder="Nombre y Apellido" required>
+            <input type="text" id="tarjeta" placeholder="Nombre de la Tarjeta" required>
+            <input type="number" id="numero" placeholder="Pago" required>
+            <button onclick="mostrar()">Agregar Tarjeta</button>
+            <button onclick="mostrarTarjetasMasUsadas()">Mostrar Tarjetas Más Usadas</button>
+
         </div>
         <div class="listado">
             <h1>
-                Lista de Billeteras y Gastos
+                Lista de Billeteras y Uso
             </h1>
-            <div class="opcionesList">
-                <input type="button" value="Ordenar Gastos">
-                <input type="button" value="Ordenar Gastos">
-                <input type="button" value="Ordenar Gastos">
-            </div>
-            <p>
+            <div>
+                <ul id="resultado">
 
-            </p>
+                </ul>
+            </div>
         </div>
         <div class="consumos">
             <h2>
                 Mayores Consumos
             </h2>
-            <p>
-                
-            </p>
+            <div>
+                <ul id="resultadoMasUsadas">
+
+                </ul>
+            </div>
         </div>
     </main>
 </body>
