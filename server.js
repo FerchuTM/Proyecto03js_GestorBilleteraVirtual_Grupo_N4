@@ -1,15 +1,20 @@
-const express = require ('express');
+const express = require('express');
 
 const app = express();
 
-//endpoint
-app.get('/',(req,res)=>{
-    res.end("Bienvenidos a mi server");
+//Endpoint
+app.get('/', (req, res) => {
     console.log(__dirname);
+    res.sendFile(__dirname + "/view/index.html"); 
 });
-//routing
+
+//Routing
+app.use('/src', express.static(__dirname + "/src"));
+app.use('/css',express.static(__dirname + "/css"));
+app.use('/view', express.static(__dirname + "/view"));
+app.use('/node_modules', express.static(__dirname + "/node_modules"));
 
 //listening
-app.listen(5000,()=>{
-    console.log("Wiii")
+app.listen(5000, () => {
+    console.log("Wiii");
 });
